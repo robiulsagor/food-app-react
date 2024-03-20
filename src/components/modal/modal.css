@@ -1,0 +1,99 @@
+.modal-container {
+  width: 100%;
+  height: 100vh;
+  position: absolute;
+  top: 0;
+  left: 0;
+  background: #18171774;
+  z-index: 15;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  backdrop-filter: blur(5px);
+}
+
+.modal {
+  width: 80%;
+  /* height: 50%; */
+  background: white;
+  z-index: 30;
+  border-radius: 8px;
+  position: relative;
+  /* padding: 10px; */
+}
+
+.modal-close {
+  position: absolute;
+  height: 30px;
+  width: 30px;
+  right: 8px;
+  top: 8px;
+  font-size: 26px;
+  color: #666;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.modal-close:hover {
+  color: #000;
+  scale: 1.16;
+}
+
+.modal h2 {
+  text-align: center;
+  padding: 10px 0;
+  border-bottom: 2px solid #00000049;
+  margin-bottom: 7px;
+}
+
+.modal .body {
+  padding: 15px;
+}
+
+.modal input {
+  width: 100%;
+  padding: 5px;
+  outline: none;
+  font-family: inherit;
+  border-radius: 6px;
+  border: 1px solid #aaa;
+  font-size: 16px;
+}
+
+.result {
+  padding: 30px 0;
+}
+
+.no-query {
+  font-size: 25px;
+  color: rgb(184, 27, 27);
+}
+
+.loading-container {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  justify-content: center;
+}
+
+.loading {
+  font-size: 22px;
+  animation: animate 1s both infinite;
+}
+
+@keyframes animate {
+  0% {
+    transform: rotateZ(0deg);
+    /* background: #000; */
+  }
+
+  100% {
+    transform: rotateZ(360deg);
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .modal {
+    width: 600px;
+  }
+}

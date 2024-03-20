@@ -28,18 +28,17 @@ button {
   font-family: inherit;
 }
 
+.portal {
+  position: absolute;
+}
+
 .overlay {
-  width: 400px;
-  height: 300px;
   position: absolute;
   top: 0;
   left: 0;
   height: 100%;
   width: 100%;
   z-index: 10;
-}
-
-.portal {
-  background: #000;
-  position: absolute;
+  backdrop-filter: blur(4px);
+  background: #00000049;
 }
