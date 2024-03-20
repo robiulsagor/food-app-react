@@ -1,0 +1,162 @@
+.nav {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 20px 0;
+}
+
+.logo img {
+  width: 120px;
+}
+
+.nav .nav-menu {
+  display: flex;
+  list-style: none;
+  gap: 22px;
+  text-transform: capitalize;
+  transition: 0.3s;
+}
+
+.nav .nav-menu a.active {
+  border-bottom: 2px solid #222;
+  padding-bottom: 3px;
+}
+
+.nav .nav-menu li {
+  position: relative;
+  transition: 0.3s;
+}
+
+.nav .nav-menu li a::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -4px;
+  width: 0;
+  height: 1px;
+  background: #000;
+  transition: all 0.4s;
+}
+
+.nav .nav-menu li a:hover::after {
+  width: 100%;
+}
+
+.search {
+  border: 1px solid #444;
+  height: 30px;
+  width: 30px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 10px;
+}
+
+.btn {
+  padding: 6px 28px;
+  border-radius: 20px;
+  font-size: 16px;
+  border: 1px solid #aaa;
+  text-transform: capitalize;
+  background: transparent;
+  cursor: pointer;
+  transition: all 0.4s cubic-bezier(0.075, 0.82, 0.165, 1);
+}
+
+.btn:hover {
+  background: #0000000a;
+}
+
+/* mobile */
+
+.bars {
+  display: none;
+  cursor: pointer;
+}
+
+.mobile-nav-container {
+  display: none;
+  position: absolute;
+  background: #000;
+  height: 100vh;
+  width: 300px;
+  top: 0;
+  right: -300px;
+  color: #fff;
+  transition: 0.4s;
+}
+
+@media screen and (max-width: 650px) {
+  .nav .nav-menu,
+  .btn {
+    display: none;
+  }
+
+  .bars {
+    display: block;
+    font-size: 28px;
+  }
+
+  .mobile-nav-container {
+    display: block;
+  }
+
+  .mobile-nav-container.active {
+    right: 0px;
+    z-index: 20;
+  }
+
+  .mobile-nav-container ul {
+    color: #fff;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    gap: 25px;
+    font-size: 19px;
+    text-transform: capitalize;
+    list-style: none;
+  }
+
+  .mobile-nav-container ul a:hover,
+  .mobile-nav-container ul .btn:hover {
+    opacity: 0.7;
+  }
+
+  .mobile-nav-container ul .btn {
+    display: block;
+    color: #fff;
+    font-size: 18px;
+  }
+
+  .mobile-nav-close {
+    position: absolute;
+    top: 21px;
+    right: 40px;
+    font-size: 30px;
+    cursor: pointer;
+    font-weight: bold;
+    /* border: 1px solid red; */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 33px;
+    width: 33px;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .nav .nav-menu {
+    font-size: 14px;
+    gap: 18px;
+  }
+
+  .logo img {
+    width: 100px;
+  }
+
+  .btn {
+    font-size: 14px;
+  }
+}
