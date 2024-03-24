@@ -42,3 +42,14 @@ button {
   backdrop-filter: blur(4px);
   background: #00000049;
 }
+
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+    left: 7vw;
+  }
+  100% {
+    opacity: 1;
+    left: 5vw;
+  }
+}
