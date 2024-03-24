@@ -3,6 +3,7 @@ import { createPortal } from "react-dom";
 import { FaBars } from "react-icons/fa";
 import { IoIosSearch } from "react-icons/io";
 import { RxCross2 } from "react-icons/rx";
+import { Link } from "react-router-dom";
 import logo from "../../assets/logo1.png";
 import SearchModal from "../modal/SearchModal";
 import Portal from "../portal/Portal";
@@ -19,9 +20,9 @@ export default function Nav() {
 
   return (
     <div className="nav">
-      <a href="#" className="logo">
+      <Link to={"/"} className="logo">
         <img src={logo} alt="" />
-      </a>
+      </Link>
 
       <ul className="nav-menu">
         <li>
